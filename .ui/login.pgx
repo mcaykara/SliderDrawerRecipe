@@ -1,0 +1,110 @@
+{
+	"components": [
+		{
+			"className": ".page",
+			"id": "91b0-89ca-cddc-b98c",
+			"initialized": true,
+			"props": {
+				"children": [
+					"4592-5e5a-69c8-0018",
+					"84fe-b8bc-3ac8-eb8c",
+					"1ff5-ac25-b190-02a8",
+					"bd21-80e3-f33b-fd32",
+					"b0ab-de70-d951-13b0"
+				],
+				"name": "login",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {
+				"flexProps": {
+					"alignItems": "CENTER",
+					"justifyContent": "CENTER"
+				}
+			},
+			"version": "6.9.0"
+		},
+		{
+			"className": ".statusBar",
+			"id": "4592-5e5a-69c8-0018",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "91b0-89ca-cddc-b98c"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".headerBar",
+			"id": "84fe-b8bc-3ac8-eb8c",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "91b0-89ca-cddc-b98c",
+				"title": "Login"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Login"
+			}
+		},
+		{
+			"className": ".textBox .stretch",
+			"id": "1ff5-ac25-b190-02a8",
+			"props": {
+				"children": [],
+				"hint": "Username",
+				"name": "tbUsername",
+				"parent": "91b0-89ca-cddc-b98c",
+				"usePageVariable": true
+			},
+			"type": "TextBox",
+			"userProps": {
+				"hint": "Username",
+				"textAlignment": "MIDCENTER",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".textBox .stretch",
+			"id": "bd21-80e3-f33b-fd32",
+			"props": {
+				"children": [],
+				"hint": "Password",
+				"isPassword": true,
+				"name": "tbPassword",
+				"parent": "91b0-89ca-cddc-b98c",
+				"usePageVariable": true
+			},
+			"type": "TextBox",
+			"userProps": {
+				"hint": "Password",
+				"isPassword": true,
+				"textAlignment": "MIDCENTER",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".button .stretch",
+			"id": "b0ab-de70-d951-13b0",
+			"props": {
+				"autoHeight": 70.17543859649123,
+				"children": [],
+				"name": "btnLogin",
+				"parent": "91b0-89ca-cddc-b98c",
+				"text": "Login",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 70.17543859649123,
+				"text": "Login",
+				"usePageVariable": true
+			}
+		}
+	]
+}

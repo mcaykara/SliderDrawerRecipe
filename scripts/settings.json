@@ -1,0 +1,13 @@
+{
+	"config": {
+		"theme": {
+			"currentTheme": "recipesnewTheme",
+			"themes": [
+				"defaultTheme",
+				"recipesnewTheme"
+			],
+			"baseTheme": "recipesnewTheme"
+		},
+		"version": "6.9.0"
+	}
+}

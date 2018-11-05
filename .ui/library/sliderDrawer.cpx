@@ -1,0 +1,61 @@
+{
+	"components": [
+		{
+			"className": ".flexLayout",
+			"id": "2c28-8f0f-abf4-e837",
+			"props": {
+				"children": [
+					"5b2d-3467-23a9-dbdd",
+					"b1ed-bab4-b58e-13b1"
+				],
+				"name": "sliderDrawer",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"height": 298.1132075471698,
+				"left": 35.08771929824562,
+				"top": 45.6140350877193,
+				"width": 298.1132075471698
+			}
+		},
+		{
+			"className": ".button .button-sliderdrawer",
+			"id": "5b2d-3467-23a9-dbdd",
+			"props": {
+				"children": [],
+				"name": "btnDashboard",
+				"parent": "2c28-8f0f-abf4-e837",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Button",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".button .button-sliderdrawer",
+			"id": "b1ed-bab4-b58e-13b1",
+			"props": {
+				"children": [],
+				"name": "btnSecondPage",
+				"parent": "2c28-8f0f-abf4-e837",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Button",
+			"userProps": {
+				"usePageVariable": true
+			}
+		}
+	]
+}

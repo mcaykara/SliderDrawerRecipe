@@ -1,0 +1,9 @@
+{
+	".stretch": {
+		"width": null,
+		"flexProps": {
+			"alignSelf": "STRETCH"
+		},
+		"height": 60
+	}
+}

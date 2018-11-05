@@ -1,0 +1,8 @@
+{
+	".button": {
+		"&-sliderdrawer": {
+			"width": null,
+			"textAlignment": "MIDLEFT"
+		}
+	}
+}

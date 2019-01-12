@@ -1,12 +1,14 @@
-const Router = require("sf-core/ui/router");
 const extend = require('js-base/core/extend');
 const SecondDesign = require('ui/ui_second');
+const Application = require("sf-core/application");
+
 
 const Second = extend(SecondDesign)(
     // Constructor
-    function(_super) {
+    function(_super, routeData) {
         // Initalizes super class for this page scope
         _super(this);
+        this.routeData = routeData;
         // Overrides super.onShow method
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
@@ -17,14 +19,13 @@ const Second = extend(SecondDesign)(
  * @event onShow
  * This event is called when a page appears on the screen (everytime).
  * @param {function} superOnShow super onShow function
- * @param {Object} parameters passed from Router.go function
  */
-function onShow(superOnShow, e) {
+function onShow(superOnShow) {
     superOnShow();
     const page = this;
-    if (!e)
+    if (!page.routeData)
         return;
-    var user = e.user;
+    var user = page.routeData.user;
     page.headerBar.title = `${user} Second Page`;
 }
 
@@ -36,7 +37,7 @@ function onShow(superOnShow, e) {
 function onLoad(superOnLoad) {
     superOnLoad();
     const page = this;
-    Router.sliderDrawer.enabled = true;
+    Application.sliderDrawer.enabled = true;
     page.headerBar.leftItemEnabled = false;
 }
 

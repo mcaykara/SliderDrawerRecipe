@@ -1,7 +1,9 @@
-const Router = require("sf-core/ui/router");
 const componentContextPatch = require("@smartface/contx/lib/smartface/componentContextPatch");
 const extend = require('js-base/core/extend');
 const SliderDrawerDesign = require('library/SliderDrawer');
+const Application = require("sf-core/application");
+
+const router = require("../routes");
 
 const SliderDrawer = extend(SliderDrawerDesign)(
     // Constructor
@@ -9,7 +11,6 @@ const SliderDrawer = extend(SliderDrawerDesign)(
         // Initalizes super class for this scope
         _super(this, props || {});
         this.pageName = pageName;
-
         // This is important, connect SliderDrawer object to context
         componentContextPatch(this, "sliderDrawer");
 
@@ -26,12 +27,12 @@ const SliderDrawer = extend(SliderDrawerDesign)(
                 this.btnDashboard.text = `    ${isAdmin ? "Admin" : user} Dashboard`;
                 this.btnSecondPage.text = `    ${isAdmin ? "Admin" : user} Second Page`;
                 this.btnDashboard.onPress = _ => {
-                    Router.go("dashboard", { user });
-                    Router.sliderDrawer.hide();
+                    router.push("/stack/login/dashboard", { user });
+                    Application.sliderDrawer.hide();
                 };
                 this.btnSecondPage.onPress = _ => {
-                    Router.go("second", { user });
-                    Router.sliderDrawer.hide();
+                    router.push("/stack/login/second", { user });
+                    Application.sliderDrawer.hide();
                 };
             }
         });

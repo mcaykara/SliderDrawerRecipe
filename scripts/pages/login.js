@@ -1,12 +1,13 @@
-const Router = require("sf-core/ui/router");
 const extend = require('js-base/core/extend');
 const LoginDesign = require('ui/ui_login');
+const Application = require("sf-core/application");
 
 const Login = extend(LoginDesign)(
     // Constructor
-    function(_super) {
+    function(_super, router) {
         // Initalizes super class for this page scope
         _super(this);
+        this.router = router;
         // Overrides super.onShow method
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
@@ -31,7 +32,7 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
     superOnLoad();
-    Router.sliderDrawer.enabled = false;
+    Application.sliderDrawer.enabled = false;
 }
 
 function performLogin() {
@@ -45,7 +46,8 @@ function performLogin() {
         return alert("No password provided");
     }
     require("../sliderDrawer").ui.user = username;
-    Router.go("dashboard", { user: username });
+    page.router.push("/stack/login/dashboard", { user: username });
+
 }
 
 module.exports = Login;

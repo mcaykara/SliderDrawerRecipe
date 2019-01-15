@@ -14,10 +14,9 @@ Application.onUnhandledError = function(e) {
 
 require("sf-extension-utils");
 require("./theme");
+require("./routes");
 
-const Router = require("sf-core/ui/router");
 const Network = require("sf-core/device/network");
-
 var sliderDrawer = require("./sliderDrawer").self;
 var notifier = new Network.createNotifier();
 
@@ -27,8 +26,5 @@ notifier.subscribe((connectionType) => {
     }
 });
 
-Router.add("login", require("./pages/login"));
-Router.add("dashboard", require("./pages/dashboard"));
-Router.add("second", require("./pages/second"));
-Router.go("login");
-Router.sliderDrawer = sliderDrawer;
+
+Application.sliderDrawer = sliderDrawer;
